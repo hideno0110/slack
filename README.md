@@ -6,8 +6,11 @@ export ENV['SLACK_API_TOKEN']='あなたのslack api token'
 4. rails s
 
 # API
+### slack-ruby-client
 http://www.rubydoc.info/gems/slack-ruby-client
-メッセージ一覧の取得
+
+### メッセージ一覧の取得
 http://www.rubydoc.info/gems/slack-ruby-client/Slack/Web/Api/Endpoints/Channels#channels_history-instance_method
-メッセージ削除
+
+### メッセージ削除
 http://www.rubydoc.info/gems/slack-ruby-client/Slack/Web/Api/Endpoints/Chat#chat_delete-instance_method
