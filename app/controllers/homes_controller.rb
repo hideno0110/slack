@@ -6,7 +6,7 @@ class HomesController < ApplicationController
   def index
     @channel_history = web_client.channels_history(
       channel: '#general',
-      oldest: (Time.now - (60 * 60 * 24)).to_i,
+      oldest: (Time.now - (60 * 60 * 24 * 7)).to_i,
       count: 1000
     )
   end
