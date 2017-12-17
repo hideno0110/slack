@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Homes</h1>
-
-<table>
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
     <tr>
       <th></th>
@@ -14,7 +11,7 @@
 
   <tbody>
   <%= form_tag('/delete_chats', :method => :post) do %>
-    <%= submit_tag '選択削除' %>
+    <%= submit_tag '選択削除', :class => "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
     <% @channel_history.messages.each do |history| %>
       <tr>
         <td><%= check_box 'history', history.ts, {}, true, false %></td>
@@ -26,3 +23,4 @@
   <% end %>
   </tbody>
 </table>
+</div>
