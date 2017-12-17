@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Homes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>ts</th>
+      <th>text</th>
+      <th>user</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <%= form_tag('/delete_chats', :method => :post) do %>
+    <%= submit_tag '選択削除' %>
+    <% @channel_history.messages.each do |history| %>
+      <tr>
+        <td><%= check_box 'history', history.ts, {}, true, false %></td>
+        <td><%= history.ts %></td>
+        <td><%= history.text %></td>
+        <td><%= history.user %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
